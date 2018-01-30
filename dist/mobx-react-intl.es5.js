@@ -18,7 +18,6 @@ var LocaleStore = /** @class */ (function () {
         };
         this.formatDefinedMessage = function (message, values) {
             if (!_this.messages[message.id]) {
-                console.warn("Id not found in intl list: " + message.id);
                 return message.defaultMessage;
             }
             return _formatMessage(_this.messages[message.id], values);

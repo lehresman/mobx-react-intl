@@ -52,7 +52,7 @@ export class LocaleStore {
 
     formatDefinedMessage = (message: IMessageFormat, values?: object): string => {
         if (!this.messages[message.id]) {
-            return message.defaultMessage;
+            return _formatMessage(message.defaultMessage, values);
         }
         return _formatMessage(this.messages[message.id], values);
     }
